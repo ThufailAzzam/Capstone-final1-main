@@ -55,7 +55,7 @@ class BorrowingStatsWidget extends ChartWidget
             
             // Count borrowings for this month
             $count = Borrow::query()
-                ->whereBetween('borrow_date', [$startOfMonth, $endOfMonth])
+                ->whereBetween('tgl_peminjaman', [$startOfMonth, $endOfMonth])
                 ->count();
                 
             $counts[] = $count;
